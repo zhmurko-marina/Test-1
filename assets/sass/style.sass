@@ -1,0 +1,193 @@
+@import "icon-font"
+@import "variables"
+
+/**************************************************
+    GENERAL STYLES
+/**************************************************/
+
+*
+  box-sizing :   border-box
+
+body
+  width :   100%
+  padding :   0
+  overflow-x :   hidden
+  font-family :   'Lato'
+.row
+  margin :   0
+
+.row::before, .row::after
+  display :   none
+.col-lg-6, .col-lg-3, .col-sm-6
+  padding :   0
+
+
+
+/**************************************************
+  BLACK MASK
+/**************************************************/
+.container-fluid::before
+  content: ''
+  z-index: 10
+  display: block
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(0,0,0,0.8)
+
+/**************************************************
+  HEADER
+/**************************************************/
+header
+  position: relative
+  z-index: 20
+  img
+    margin: 0
+    padding: 60px 0
+  h2
+    color: $white
+    font-size: 36px
+    text-shadow: 1px 1px 0 $black
+    line-height: 1.7em
+    font-weight: 300
+    letter-spacing: 2px
+
+/**************************************************
+  TIMER
+/**************************************************/
+
+.timer
+  position: relative
+  z-index: 20
+  padding: 80px 0
+  .countdown-section
+    display: block
+    padding: 10px 0
+    .countdown-amount
+      display: block
+      font-size: 70px
+      color: $main-color
+      font-weight: 700
+    .countdown-period
+      font-size: 30px
+      color: $white
+  .countdown-section:not(:last-child)
+    border-right: 1px solid $white-half-opacity
+  span.text
+    border: 1px solid $white-half-opacity
+    display: inline-block
+    font-style: italic
+    padding: 10px 20px
+    color: $white
+    font-size: 20px
+
+/**************************************************
+  WRAPPER WITH FORM
+/**************************************************/
+
+.subscribe-wrap
+  position: relative
+  z-index: 100
+  p
+    font-size: 25px
+    text-shadow: 1px 1px 0 $black
+    color: $white
+  .form-part
+    padding-top: 40px
+    margin: auto
+    .email
+      border: none
+      width: 300px
+      position: relative
+      border-radius: 5px 0 0 5px
+      font-size: 20px
+      padding: 38px 26px
+    button
+      font-size: 18px
+      margin: 0
+      padding: 25px 26px
+      border-radius: 0 5px 5px 0
+      background: $main-color
+      border: none
+      color: $white
+      transition: 0.3s
+    button:hover
+      background: $dark-blue
+      border: none
+
+/**************************************************
+  SOCIAL LINKS
+/**************************************************/
+
+.social-links
+  z-index: 1000
+  position: relative
+  margin: 70px auto
+  a
+    display: inline-block
+    border: 3px solid $white
+    border-radius: 50%
+    margin: 0 10px 10px 10px
+    width: 60px
+    height: 60px
+    line-height: 60px
+    font-size: 23px
+    span
+      color: $white
+    .icon-linkedin:before
+      font-size: 35px
+  a:hover
+    text-decoration: none
+    transform: rotate(360deg)
+    transition: all 0.3s
+    background-color: $white
+    span
+      color: $main-color
+
+.player
+  position: relative
+  z-index: 100
+  span
+    color: $white
+    font-size: 23px
+  .icon-pause
+    font-size: 17px
+  li
+    cursor: pointer
+
+ 
+
+
+/**************************************************
+    MEDIA QUERIES
+/**************************************************/
+@media screen and (max-width :   767px)
+  .container
+    width :   100%
+  .timer
+    .countdown-section:not(:last-child)
+      border: none
+  .subscribe-wrap
+    .form-part
+      .email
+        width: 65%
+        height: 60px
+      button
+        width: 35%
+        padding: 0 15px
+        height: 75px
+        font-size: 15px
+  .social-links
+    a
+      display: inline-block
+      border: 3px solid $white
+      border-radius: 50%
+      margin: 0 10px 10px 10px
+      width: 55px
+      height: 55px
+      line-height: 55px
+      font-size: 18px
+      span
+        color: $white
