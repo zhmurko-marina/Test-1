@@ -89,7 +89,7 @@ header
 
 .subscribe-wrap
   position: relative
-  z-index: 100
+  z-index: 20
   p
     font-size: 25px
     text-shadow: 1px 1px 0 $black
@@ -104,25 +104,28 @@ header
       border-radius: 5px 0 0 5px
       font-size: 20px
       padding: 38px 26px
-    button
-      font-size: 18px
-      margin: 0
-      padding: 25px 26px
-      border-radius: 0 5px 5px 0
-      background: $main-color
-      border: none
-      color: $white
-      transition: 0.3s
-    button:hover
-      background: $dark-blue
-      border: none
+    span
+      line-height: 20px
+      button
+        font-size: 18px
+        white-space: nowrap
+        margin: 0
+        padding: 26px 26px 25px
+        border-radius: 0 5px 5px 0
+        background: $main-color
+        border: none
+        color: $white
+        transition: 0.3s
+      button:hover
+        background: $dark-blue
+        border: none
 
 /**************************************************
   SOCIAL LINKS
 /**************************************************/
 
 .social-links
-  z-index: 1000
+  z-index: 20
   position: relative
   margin: 70px auto
   a
@@ -146,9 +149,13 @@ header
     span
       color: $main-color
 
+/**************************************************
+  PLAYER
+/**************************************************/
+
 .player
   position: relative
-  z-index: 100
+  z-index: 20
   span
     color: $white
     font-size: 23px
@@ -166,6 +173,10 @@ header
 @media screen and (max-width :   767px)
   .container
     width :   100%
+  header
+    img
+      width: 70%
+      padding: 60px 0
   .timer
     .countdown-section:not(:last-child)
       border: none
@@ -173,21 +184,25 @@ header
     .form-part
       .email
         width: 65%
-        height: 60px
-      button
-        width: 35%
-        padding: 0 15px
-        height: 75px
-        font-size: 15px
+        height: 65px
+        padding: 0 5%
+      span
+        button
+          width: 35%
+          padding: 0 3%
+          height: 65px
+          font-size: 10px
   .social-links
+    li
+      margin: 0
     a
       display: inline-block
       border: 3px solid $white
       border-radius: 50%
-      margin: 0 10px 10px 10px
-      width: 55px
-      height: 55px
-      line-height: 55px
-      font-size: 18px
+      margin: 0
+      width: 50px
+      height: 50px
+      line-height: 50px
+      font-size: 15px
       span
         color: $white
