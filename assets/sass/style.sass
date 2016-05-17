@@ -5,23 +5,8 @@
     GENERAL STYLES
 /**************************************************/
 
-*
-  box-sizing :   border-box
-
-body
-  width :   100%
-  padding :   0
-  overflow-x :   hidden
-  font-family :   'Lato'
-.row
-  margin :   0
-
-.row::before, .row::after
-  display :   none
-.col-lg-6, .col-lg-3, .col-sm-6
-  padding :   0
-
-
+.container-fluid
+  font-family : 'Lato'
 
 /**************************************************
   BLACK MASK
@@ -67,7 +52,7 @@ header
     padding: 10px 0
     .countdown-amount
       display: block
-      font-size: 70px
+      font-size: $timer-font-size
       color: $main-color
       font-weight: 700
     .countdown-period
@@ -132,11 +117,11 @@ header
     display: inline-block
     border: 3px solid $white
     border-radius: 50%
-    margin: 0 10px 10px 10px
+    margin: 0 10px 10px
     width: 60px
     height: 60px
-    line-height: 60px
-    font-size: 23px
+    line-height: 55px
+    font-size: $icons-font-size
     span
       color: $white
     .icon-linkedin:before
@@ -158,14 +143,11 @@ header
   z-index: 20
   span
     color: $white
-    font-size: 23px
+    font-size: $icons-font-size
   .icon-pause
     font-size: 17px
   li
     cursor: pointer
-
- 
-
 
 /**************************************************
     MEDIA QUERIES
@@ -193,12 +175,7 @@ header
           height: 65px
           font-size: 10px
   .social-links
-    li
-      margin: 0
     a
-      display: inline-block
-      border: 3px solid $white
-      border-radius: 50%
       margin: 0
       width: 50px
       height: 50px
