@@ -4,9 +4,19 @@
 /**************************************************
     GENERAL STYLES
 /**************************************************/
+body
+  overflow-x: hidden
 
 .container-fluid
   font-family : 'Lato'
+  min-height: 100%
+  display: table
+  width: 100%
+
+.main-part
+  width: 100%
+  display: table-cell
+  vertical-align: middle
 
 /**************************************************
   BLACK MASK
@@ -21,6 +31,7 @@
   left: 0
   right: 0
   background: rgba(0,0,0,0.8)
+
 
 /**************************************************
   HEADER
@@ -49,7 +60,7 @@ header
   padding: 80px 0
   .countdown-section
     display: block
-    padding: 10px 0
+    padding: 15px 0
     .countdown-amount
       display: block
       font-size: $timer-font-size
@@ -88,14 +99,16 @@ header
       position: relative
       border-radius: 5px 0 0 5px
       font-size: 20px
-      padding: 38px 26px
+      height: 60px
+      padding: 0 26px
     span
       line-height: 20px
       button
         font-size: 18px
         white-space: nowrap
         margin: 0
-        padding: 26px 26px 25px
+        height: 60px
+        padding: 0 26px
         border-radius: 0 5px 5px 0
         background: $main-color
         border: none
@@ -139,7 +152,9 @@ header
 /**************************************************/
 
 .player
-  position: relative
+  position: absolute
+  bottom: 20px
+  right: 20px
   z-index: 20
   span
     color: $white
@@ -152,6 +167,14 @@ header
 /**************************************************
     MEDIA QUERIES
 /**************************************************/
+@media screen and (max-width :   991px)
+  #tubular-container, #tubular-shield
+    display: none
+  .container-fluid
+    background: url("../images/background-forest.png") center
+  .player
+    display: none
+
 @media screen and (max-width :   767px)
   .container
     width :   100%
@@ -183,3 +206,24 @@ header
       font-size: 15px
       span
         color: $white
+
+@media screen and (max-width :   450px)
+  .timer
+    .countdown-section
+      .countdown-amount
+        font-size: 50px
+      .countdown-period
+        font-size: 20px
+  .subscribe-wrap
+    .form-part
+      .email
+        font-size: 15px
+        width: 55%
+        height: 65px
+        padding: 0 8px
+      span
+        button
+          width: 45%
+          padding: 0 5px
+          height: 65px
+          font-size: 10px
