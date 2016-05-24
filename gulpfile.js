@@ -47,6 +47,6 @@ gulp.task('sass',function (){
 
 gulp.task('default', ['browserSync','sass'], function() {
     gulp.watch(paths.styles.files, ['sass']);
-    gulp.watch('assets/*.html', browserSync.reload);
+    gulp.watch('**/*.html', browserSync.reload);
 	gulp.watch('assets/js/**/*.js', browserSync.reload);
 });

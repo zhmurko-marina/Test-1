@@ -734,7 +734,7 @@
                 var labelsNum = inst.options['labels' + whichLabels(inst._periods[period])];
                 return ((!inst.options.significant && show[period]) ||
                 (inst.options.significant && showSignificant[period]) ?
-                '<span class="' + self._sectionClass + ' col-sm-3 col-xs-6">' +
+                '<span class="' + self._sectionClass + ' col-xs-3 ">' +
                 '<span class="' + self._amountClass + '">' +
                 self._minDigits(inst, inst._periods[period], minDigits) + '</span>' +
                 '<span class="' + self._periodClass + '">' +
